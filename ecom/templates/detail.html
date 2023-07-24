@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid" style="margin-bottom:100px;">
+<div class="row">
+<div class="col-sm-6 mt-5">
+<img src="{{p.image.url}}" height="400px" width="400px">
+</div>
+    <div class="col-sm-6 mt-5">
+    <h5 >{{p.name}}</h5>
+    <h6 >{{p.price}}</h6>
+    <h6>Product Description</h6>
+    <p style="text-align:justify">{{p.description}}</p>
+
+    <a href="{% url 'cart:cartview'  %}" class="btn btn-primary">ADD TO CART</a>
+    </div>
+</div>
+</div>
+{% endblock %}
